@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj": {}
+  },
+  "projects": {
+    "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj",
+        "projectName": "UdemyCourseInicio",
+        "projectPath": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj",
+        "packagesPath": "/Users/iurypedrosa/.nuget/packages/",
+        "outputPath": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/iurypedrosa/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/Users/iurypedrosa/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
