@@ -8,24 +8,27 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/iurypedrosa/.nuget/packages/": {}
+    "C:\\Users\\iuryp\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj",
+      "projectUniqueName": "C:\\Users\\iuryp\\Desktop\\Estudos\\BacklEnd\\c#\\static\\UdemyCourseInicio\\UdemyCourseInicio\\UdemyCourseInicio.csproj",
       "projectName": "UdemyCourseInicio",
-      "projectPath": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/UdemyCourseInicio.csproj",
-      "packagesPath": "/Users/iurypedrosa/.nuget/packages/",
-      "outputPath": "/Users/iurypedrosa/Desktop/Mesa/Sistemas de Informação./Cursos/Back End/c#/static/UdemyCourseInicio/UdemyCourseInicio/obj/",
+      "projectPath": "C:\\Users\\iuryp\\Desktop\\Estudos\\BacklEnd\\c#\\static\\UdemyCourseInicio\\UdemyCourseInicio\\UdemyCourseInicio.csproj",
+      "packagesPath": "C:\\Users\\iuryp\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\iuryp\\Desktop\\Estudos\\BacklEnd\\c#\\static\\UdemyCourseInicio\\UdemyCourseInicio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/iurypedrosa/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\iuryp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,6 +41,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -59,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/Users/iurypedrosa/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
