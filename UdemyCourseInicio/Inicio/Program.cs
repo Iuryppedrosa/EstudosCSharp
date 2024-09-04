@@ -1,4 +1,5 @@
 ﻿using UdemyCourseInicio.Inicio;
+using UdemyCourseInicio.Inicio.EstudosSoltos.Estudos;
 using UdemyCourseInicio.Inicio.GerenciadorDeLivros;
 
 class Program
@@ -7,6 +8,8 @@ class Program
     {
         MainCalc maincalc = new MainCalc();
         MainBiblioteca mainbiblioteca = new MainBiblioteca();
+        Estudos estudos = new Estudos();
+
         if (args.Length > 0 && args[0] == "Calculadora")
         {
             DateTime dataAtual = DateTime.Now;
@@ -28,12 +31,22 @@ class Program
             maincalc.Calcular();
         }
 
-        if (args.Length > 0 && args[0] == "Livraria")
+        else if(args.Length > 0 && args[0] == "Livraria")
         {
             DateTime dataAtual = DateTime.Now;
             Console.WriteLine(dataAtual);
             mainbiblioteca.MainProgramBiblio();
             
+        }
+        else if(args.Length > 0 && args[0] == "EstudosSoltos")
+        {
+            Console.WriteLine("Iniciando parte de estudos soltos");
+            //formatarSaidaConsole.Formatar();
+            //estudos.ConversaoDeTipos();
+            //estudos.ConversaoDeTiposString();
+            estudos.EntradaDeDados();
+
+
         }
     }
 }
