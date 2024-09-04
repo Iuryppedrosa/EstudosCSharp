@@ -125,6 +125,8 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
             Console.WriteLine("Pegando o codigo ASCII da tecla digitada");
             var dadoInformado = Console.ReadKey();
 
+            Console.WriteLine("TesteCommit");
+
             Console.WriteLine("Nome: " + nome);
             Console.WriteLine("Idade: " + idade);
             Console.WriteLine("Salário: " + salario);
