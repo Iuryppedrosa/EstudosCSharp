@@ -44,7 +44,9 @@ class Program
             //formatarSaidaConsole.Formatar();
             //estudos.ConversaoDeTipos();
             //estudos.ConversaoDeTiposString();
-            estudos.EntradaDeDados();
+            //estudos.EntradaDeDados();
+            estudos.EstudandoVariaveis();
+            estudos.EstudosDeConstantes();
 
 
         }

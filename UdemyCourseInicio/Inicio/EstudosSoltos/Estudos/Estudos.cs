@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -132,6 +133,49 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
             Console.WriteLine("Salário: " + salario);
             Console.WriteLine("Estado Civil: " + estadoCivil);
             Console.WriteLine($"Tecla digitada: {dadoInformado.KeyChar}");
+        }
+        public void EstudandoVariaveis()
+        {
+            var idade = 20;
+            var nome = "João";
+            var salario = 1000.50;
+
+            // "c" é para formatar para moeda
+            Console.WriteLine($"{nome} tem {idade} anos e recebe {salario.ToString("c")} reais");
+
+            // limitacoes de VAR
+            // var numero; // Não é possível declarar uma variável sem atribuir um valor
+            // var numero = null; // Não é possível atribuir null a uma variável var
+            // var numero = 10; // Não é possível atribuir um valor de um tipo a uma variável var e depois atribuir um valor de outro tipo
+            // numero = "teste"; // Não é possível atribuir um valor de um tipo a uma variável var e depois atribuir um valor de outro tipo
+
+
+            var teste = new MetodoTeste();
+            teste.Teste();
+
+
+        }
+        public void EstudosDeConstantes()
+        {
+            const int ANO = 2022;
+            const string NOME = "João";
+            const int MES = 6, SEMANA = 4, DIA = 30;
+
+            const int MESES_ANO = 12;
+            const int DIAS_SEMANA = 7;
+
+            const float DIAS_POR_MES = (float)DIA / (float)MESES_ANO;
+            Console.WriteLine(DIAS_POR_MES);
+        }
+
+      
+
+    }
+    public class MetodoTeste
+    {
+        public void Teste()
+        {
+            Console.WriteLine("Teste");
         }
     }
 
