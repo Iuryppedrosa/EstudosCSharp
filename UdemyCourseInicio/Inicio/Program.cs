@@ -45,11 +45,14 @@ class Program
             //estudos.ConversaoDeTipos();
             //estudos.ConversaoDeTiposString();
             //estudos.EntradaDeDados();
-            estudos.EstudandoVariaveis();
-            estudos.EstudosDeConstantes();
+            //estudos.EstudandoVariaveis();
+            //estudos.EstudosDeConstantes();
+
+            estudos.EstudosGerais();
 
 
         }
+        Console.ReadLine();
     }
 }
 

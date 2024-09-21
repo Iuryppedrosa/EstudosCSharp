@@ -96,7 +96,7 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
             int numero3 = 123;
             string texto4 = numero3.ToString();
             string numero3String = Convert.ToString(numero3);
-            double numero3Double = Convert.ToDouble(numero3) / 100;   
+            double numero3Double = Convert.ToDouble(numero3) / 100;
             Console.WriteLine(texto4);
             Console.WriteLine(numero3String);
             Console.WriteLine(numero3Double);
@@ -157,6 +157,7 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
         }
         public void EstudosDeConstantes()
         {
+            // const sao muitos usadas em calculos financeiros, pois o valor não pode ser alterado
             const int ANO = 2022;
             const string NOME = "João";
             const int MES = 6, SEMANA = 4, DIA = 30;
@@ -167,9 +168,18 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
             const float DIAS_POR_MES = (float)DIA / (float)MESES_ANO;
             Console.WriteLine(DIAS_POR_MES);
         }
+        public void EstudosGerais()
+        {
+            var nullTypes = new TesteDeNullableTypes();
+            //nullTypes.NullTypesStudy();
 
-      
+            var instrucoesDeControle = new EstruturasDeControle();
+            /*           instrucoesDeControle.InstrucaoIf();
+                        instrucoesDeControle.InstrucaoSwitch("XuXu");
+                        instrucoesDeControle.InstrucaoWhile();*/
+            instrucoesDeControle.InstrucaoFor();
 
+        }
     }
     public class MetodoTeste
     {
@@ -179,4 +189,149 @@ namespace UdemyCourseInicio.Inicio.EstudosSoltos.Estudos
         }
     }
 
+    public class TesteDeNullableTypes
+    {
+        public void NullTypesStudy()
+        {
+            string? nome = "IURY ALVES";
+            Console.WriteLine(nome?.ToLower());
+
+            string nome2 = null;
+            try
+            {
+                Console.WriteLine(nome2?.ToLower());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Erro ao tentar converter para minúsculo pois nome é null" + e.StackTrace);
+
+            }
+
+
+            int? numero = null;
+            int? numero2 = 10;
+            int numero3 = numero ?? 5;
+            int numero4 = numero2 ?? 5;
+            Console.WriteLine(numero3);
+            Console.WriteLine(numero4);
+        }
+    }
+
+    public class EstruturasDeControle
+    {
+        public void InstrucaoIf()
+        {
+            string nomeCasado = "Pedrosa";
+            int idadeParaCasar = 34;
+            bool esposaBonita = true;
+            if (nomeCasado.Equals("Pedrosa") && idadeParaCasar >= 34 || esposaBonita)
+            {
+                Console.WriteLine("Casado");
+            }
+            else if (nomeCasado.StartsWith("S") && idadeParaCasar < 34 || !esposaBonita)
+            {
+                Console.WriteLine("Solteiro");
+            }
+
+        }
+
+        public void InstrucaoSwitch(string ValorDeVerificacao)
+        {
+            switch (ValorDeVerificacao)
+            {
+                case "João":
+                    Console.WriteLine("O nome passado no metodo foi João");
+                    break;
+                case "Maria":
+                    Console.WriteLine("O nome passado no metodo foi Maria");
+                    break;
+                default:
+                    Console.WriteLine("Nome não encontrado");
+                    break;
+            }
+
+        }
+
+        public void InstrucaoWhile()
+        {
+            bool tchau = false;
+            do
+            {
+
+                Console.WriteLine("Oi!!! ");
+                int i = 1;
+                while (i < 30)
+                {
+                    Console.WriteLine($"O valor de i nesse momento é: {i}");
+                    i++;
+                    Console.WriteLine("Agora foi incrementado em 1, passando a ser: " + i);
+                }
+                int numero;
+                int contador = 1;
+                Console.WriteLine("Digite um numero mais que zero: ");
+                numero = Convert.ToInt32(Console.ReadLine());
+
+                if (numero > 0)
+                {
+                    Console.WriteLine($"Tabuada do {numero}");
+                    while (contador < 11)
+                    {
+                        Console.WriteLine($"Valor: {numero * contador}");
+                        contador++;
+                    }
+                }
+                Console.WriteLine("Deseja dizer tchau?");
+                string resposta = Console.ReadLine();
+                char respostaChar = resposta[0];
+                if (resposta == "sim" || resposta.StartsWith("s") || resposta.Equals("sim") || respostaChar == 's')
+                {
+                    tchau = true;
+                }
+            }
+            while (tchau == false);
+
+        }
+        
+
+        public void InstrucaoFor()
+        {
+            for (int i = 0; i > -10; i--)
+            {
+                Console.WriteLine(i);
+
+            }
+            List<string> nomes = new List<string>();
+            nomes.Add("João");
+            nomes.Add("Maria");
+            nomes.Add("Pedro");
+            nomes.Add("Paulo");
+            nomes.Add("Iury");
+            nomes.Add("Pedrosa");
+            nomes.Add("Santos");
+            nomes.Add("Silva");
+            nomes.Add("Santana");
+            nomes.Add("Santos");
+            nomes.Add("Silva");
+            nomes.Add("Santana");
+            nomes.Add("Santos");
+            nomes.Add("Silva");
+
+            List<int> saldo = new List<int>();
+            saldo.Add(100);
+            saldo.Add(200);
+            saldo.Add(300);
+            saldo.Add(400);
+
+
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine($"O nome é {nome}");
+                foreach (var saldoConta in saldo)
+                {
+                    Console.WriteLine($"O saldo da conta é {saldoConta}");
+                }
+            }
+        }
+    }
 }
