@@ -1,6 +1,8 @@
 ﻿using UdemyCourseInicio.Inicio;
 using UdemyCourseInicio.Inicio.EstudosSoltos.Estudos;
 using UdemyCourseInicio.Inicio.GerenciadorDeLivros;
+using UdemyCourseInicio.Inicio.POO;
+using UdemyCourseInicio.Inicio.POO.EstudosPOO;
 
 class Program
 {
@@ -9,6 +11,8 @@ class Program
         MainCalc maincalc = new MainCalc();
         MainBiblioteca mainbiblioteca = new MainBiblioteca();
         Estudos estudos = new Estudos();
+        EstudosPOO estudosPOO = new EstudosPOO();
+        
 
         if (args.Length > 0 && args[0] == "Calculadora")
         {
@@ -49,6 +53,14 @@ class Program
             //estudos.EstudosDeConstantes();
 
             estudos.EstudosGerais();
+
+
+        }
+        else if (args.Length > 0 && args[0] == "POO")
+        {
+            Console.WriteLine("Iniciando parte de estudos POO");
+            estudosPOO.CriandoPessoa();
+            estudosPOO.CriandoCarro();
 
 
         }
