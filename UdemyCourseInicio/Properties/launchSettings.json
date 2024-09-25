@@ -2,7 +2,7 @@
   "profiles": {
     "UdemyCourseInicio": {
       "commandName": "Project",
-      "commandLineArgs": "EstudosSoltos"
+      "commandLineArgs": "POO"
     }
   }
 }
