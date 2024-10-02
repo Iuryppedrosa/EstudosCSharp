@@ -59,12 +59,14 @@ class Program
         else if (args.Length > 0 && args[0] == "POO")
         {
             Console.WriteLine("Iniciando parte de estudos POO");
-            estudosPOO.CriandoPessoa();
-            estudosPOO.CriandoCarro();
-            estudosPOO.criandoAluno();
-            estudosPOO.CriandoAluno2();
-            estudosPOO.CriandoCliente();
-
+            //estudosPOO.CriandoPessoa();
+            //estudosPOO.CriandoCarro();
+            //estudosPOO.criandoAluno();
+            //estudosPOO.CriandoAluno2();
+            //estudosPOO.CriandoCliente();
+            //estudosPOO.MetodoComRetorno(1, 2);
+            estudosPOO.ExemploPratico();
+            estudosPOO.TestandoPassagemDeArgumentosPorREFeValor();
 
         }
         Console.ReadLine();

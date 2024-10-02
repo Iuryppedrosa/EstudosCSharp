@@ -104,6 +104,50 @@ namespace UdemyCourseInicio.Inicio.POO.EstudosPOO
             cl2.Exibindo();
         }
 
+        public int MetodoComRetorno(int a, int b)
+        {
+            Console.WriteLine($"---------*----------\nResultado: {a + b}");
+            return a + b;
+        }
+
+        public void ExemploPratico()
+        {
+            Cadastro cadastro = new Cadastro();
+            Funcionario func = cadastro.Registrar();
+            cadastro.ExibirDados(func);
+
+            var novoCargo = cadastro.Registrar(func);
+            cadastro.ExibirDados(novoCargo, "Cargo Alterado: ");
+        }
+
+        public void TestandoPassagemDeArgumentosPorREFeValor()
+        {
+            int x = 20;
+            Console.WriteLine("Valor de x antes de passar por dobrar: " + x);
+            CalculoExemploPassagemDeArgumentosPorValorEPorFeferencia calc = new CalculoExemploPassagemDeArgumentosPorValorEPorFeferencia();
+            calc.Dobrar(x);
+            Console.WriteLine("Valor de x depois de passar por dobrar: " + x);
+
+            int z = 20;
+            Console.WriteLine("Valor de Z antes de passar por dobrar: " + z);
+            CalculoExemploPassagemDeArgumentosPorValorEPorFeferencia calc2 = new CalculoExemploPassagemDeArgumentosPorValorEPorFeferencia();
+            // ref é uma palavra reservada que indica que o argumento é passado por referência e será usado
+            // pois é passado a referencia para o lugar de memoria onde a variavel está armazenada
+            // passa-se a copia do endereço de memoria
+            calc.Dobrar(ref z);
+            Console.WriteLine("Valor de Z depois de passar por dobrar: " + z);
+
+            Console.WriteLine("---------*---------");
+            Console.WriteLine("Passagem de argumentos por referencia com OUT (retorna 2 valores): ");
+            MetodoParaTestarRefOUT metodoParaTestarRefOUT = new MetodoParaTestarRefOUT();
+            Console.WriteLine("Informe o valor do raio: ");
+            double raio = double.Parse(Console.ReadLine());
+            double perimetro = metodoParaTestarRefOUT.CalcularAreaPerimetro(raio, out double area);
+            Console.WriteLine("Area: " + area);
+            Console.WriteLine("Perimetro: " + perimetro);
+
+        }
+
     }
 }
 
