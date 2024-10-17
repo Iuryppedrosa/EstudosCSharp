@@ -65,8 +65,11 @@ class Program
             //estudosPOO.CriandoAluno2();
             //estudosPOO.CriandoCliente();
             //estudosPOO.MetodoComRetorno(1, 2);
-            estudosPOO.ExemploPratico();
-            estudosPOO.TestandoPassagemDeArgumentosPorREFeValor();
+            //estudosPOO.ExemploPratico();
+            //estudosPOO.TestandoPassagemDeArgumentosPorREFeValor();
+            //estudosPOO.TestandoMetodoStatic();
+            estudosPOO.CamposStatic();
+            //estudosPOO.CriandoConta();
 
         }
         Console.ReadLine();

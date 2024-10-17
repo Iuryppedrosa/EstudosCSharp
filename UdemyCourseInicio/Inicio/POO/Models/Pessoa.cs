@@ -16,6 +16,36 @@ namespace UdemyCourseInicio.Inicio.POO.Models
 
     }
 
+    class Celular
+    {
+        public string? Modelo;
+        public string? Marca;
+
+        // o static faz com que o atributo seja compartilhado por todos os objetos da classe
+        public static int Preco;
+
+        public Celular()
+        {
+           
+        }
+
+        static Celular()
+        {
+            Preco = 1000;
+        }
+
+        public void ExibindoCelular(string modelo, string marca, int preco)
+        {
+            Console.WriteLine("Qual o modelo do seu celular?");
+            modelo = Console.ReadLine();
+
+            Console.WriteLine("Qual o modelo do seu celular?");
+            marca = Console.ReadLine();
+
+            Console.WriteLine($"O seu modelo é {modelo} e marca {marca} e tem o preco de {preco}");
+        }
+    }
+
     class Carro
     {
         public string? marca;
@@ -97,7 +127,7 @@ namespace UdemyCourseInicio.Inicio.POO.Models
 
         public Funcionario()
         {
-          
+
         }
     }
 
@@ -155,4 +185,26 @@ namespace UdemyCourseInicio.Inicio.POO.Models
             return perimetro;
         }
     }
+
+    public class ClassParaTestarMetodoStatic
+    {
+
+        public static void MetodoStatic()
+        {
+            Console.WriteLine("Metodo Static");
+        }
+    }
+
+    public class ContaCorrente
+    {
+        public int Conta;
+        public string? Nome;
+        public static float Juros;
+
+        public float JurosAnual()
+        {
+            return Juros * 12;
+        }
+    }
+
 }

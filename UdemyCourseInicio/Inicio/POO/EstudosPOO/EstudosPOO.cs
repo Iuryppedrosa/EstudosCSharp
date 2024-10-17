@@ -148,6 +148,48 @@ namespace UdemyCourseInicio.Inicio.POO.EstudosPOO
 
         }
 
+        public void TestandoMetodoStatic()
+        {
+            // não é necessário instanciar a classe para chamar o método
+            ClassParaTestarMetodoStatic.MetodoStatic();
+
+        }
+
+        public unsafe void CamposStatic()
+        {
+            Celular celular = new Celular();
+            //int preco = Celular.Preco = 2000;
+            //celular.ExibindoCelular(celular.Marca, celular.Modelo, Celular.Preco = 2000);
+            celular.ExibindoCelular(celular.Marca, celular.Modelo, Celular.Preco);
+            fixed (char* ptrMarca = celular.Marca, ptrModelo = celular.Modelo)
+            {
+                Console.WriteLine($"Endereço de memória da Marca: {(long)ptrMarca:X}");
+                Console.WriteLine($"Endereço de memória da Modelo: {(long)ptrModelo:X}");
+            }
+
+            fixed (int* ptrPreco = &Celular.Preco)
+            {
+                Console.WriteLine($"Endereço de memória do Preço: {(long)ptrPreco:X}");
+            }
+        }
+
+        public void CriandoConta()
+        {
+            // compartilha o campo com todas as instancias da classe.
+            ContaCorrente.Juros = 0.05f;
+            ContaCorrente c1 = new ContaCorrente();
+            c1.Conta = 1234;
+            c1.Nome = "Maria";
+            // campo static -> c1.Juros = 0.05f;
+
+            ContaCorrente c2 = new ContaCorrente();
+            c2.Conta = 5678;
+            c2.Nome = "Josefa";
+            //campo static -> c2.Juros = 0.10f;
+
+            Console.WriteLine($"Cliente: {c1.Nome} - Juros Anual: {c1.JurosAnual()}");
+            Console.WriteLine($"Cliente: {c2.Nome} - Juros Anual: {c2.JurosAnual()}");
+        }
     }
 }
 
