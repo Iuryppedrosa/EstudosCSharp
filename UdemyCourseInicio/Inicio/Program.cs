@@ -3,6 +3,7 @@ using UdemyCourseInicio.Inicio.EstudosSoltos.Estudos;
 using UdemyCourseInicio.Inicio.GerenciadorDeLivros;
 using UdemyCourseInicio.Inicio.POO;
 using UdemyCourseInicio.Inicio.POO.EstudosPOO;
+using UdemyCourseInicio.Inicio.Repository;
 
 class Program
 {
@@ -12,6 +13,7 @@ class Program
         MainBiblioteca mainbiblioteca = new MainBiblioteca();
         Estudos estudos = new Estudos();
         EstudosPOO estudosPOO = new EstudosPOO();
+        Conexoes conexoes = new Conexoes();
         
 
         if (args.Length > 0 && args[0] == "Calculadora")
@@ -68,9 +70,14 @@ class Program
             //estudosPOO.ExemploPratico();
             //estudosPOO.TestandoPassagemDeArgumentosPorREFeValor();
             //estudosPOO.TestandoMetodoStatic();
-            estudosPOO.CamposStatic();
+            //estudosPOO.CamposStatic();
             //estudosPOO.CriandoConta();
+            conexoes.criandoConexao();
 
+        }
+        else if (args.Length > 0 && args[0] == "EstudosBanco")
+        {
+            //conexoes.criandoConexao();
         }
         Console.ReadLine();
     }
